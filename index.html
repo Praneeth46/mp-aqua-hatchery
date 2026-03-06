@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MP Aqua Hatchery</title>
-
 <style>
 
 body{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI', sans-serif;
 background:#FEFEFE;
 color:#333;
 }
@@ -20,9 +11,9 @@ color:#333;
 
 header{
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:15px 40px;
+align-items:center;
+padding:15px 20px;
 background:white;
 box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
@@ -30,57 +21,58 @@ box-shadow:0 2px 8px rgba(0,0,0,0.1);
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
+gap:10px;
 }
 
 .logo img{
-height:60px;
+height:45px;
 }
 
 .logo h2{
-margin:0;
+font-size:20px;
 color:#4A6A67;
-font-size:26px;
+margin:0;
+}
+
+nav{
+display:flex;
+gap:20px;
 }
 
 nav a{
-margin-left:25px;
 text-decoration:none;
-font-weight:600;
 color:#4A6A67;
+font-weight:600;
 }
 
 /* HERO */
 
 .hero{
-height:520px;
+height:420px;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 
 background-image:url("pl-tray.jpg");
 background-size:cover;
 background-position:center;
-
 }
 
 .hero-overlay{
 background:rgba(255,255,255,0.85);
-padding:40px;
+padding:25px;
 border-radius:10px;
 }
 
 .hero h1{
 color:#4A6A67;
-font-size:48px;
+font-size:36px;
 margin:0;
 }
 
 .hero p{
-font-size:20px;
-margin-top:10px;
+font-size:18px;
 }
 
 /* SECTIONS */
@@ -88,14 +80,14 @@ margin-top:10px;
 .container{
 max-width:1100px;
 margin:auto;
-padding:70px 20px;
+padding:50px 20px;
 }
 
 .section-title{
 text-align:center;
 color:#4A6A67;
-font-size:32px;
-margin-bottom:40px;
+font-size:26px;
+margin-bottom:30px;
 }
 
 /* GRID */
@@ -103,14 +95,14 @@ margin-bottom:40px;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:20px;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 text-align:center;
 }
 
@@ -125,10 +117,12 @@ border-radius:8px;
 background:#4A6A67;
 color:white;
 text-align:center;
-padding:70px 20px;
+padding:60px 20px;
 }
 
 .cta-btn{
+display:inline-block;
+margin-top:15px;
 background:white;
 color:#4A6A67;
 padding:16px 30px;
@@ -157,8 +151,8 @@ background:#25D366;
 color:white;
 padding:14px 18px;
 border-radius:50px;
-text-decoration:none;
 font-size:18px;
+text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -170,164 +164,52 @@ background:#4A6A67;
 color:white;
 padding:14px 18px;
 border-radius:50px;
-text-decoration:none;
 font-size:18px;
+text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* MOBILE OPTIMIZATION */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+gap:12px;
+}
+
+.hero{
+height:350px;
+padding:20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section-title{
+font-size:22px;
+}
+
+.container{
+padding:40px 15px;
+}
+
+.cta-btn{
+width:100%;
+max-width:250px;
+}
+
+}
+
 </style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-<img src="logo.png">
-<h2>MP AQUA HATCHERY</h2>
-</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#facilities">Facilities</a>
-<a href="#quality">PL Quality</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-overlay">
-
-<h1>MP Aqua Hatchery</h1>
-
-<p>CAA Approved L. Vannamei Hatchery</p>
-
-</div>
-
-</section>
-
-<section class="container" id="about">
-
-<h2 class="section-title">About Our Hatchery</h2>
-
-<p style="text-align:center">
-
-MP Aqua Hatchery located in Vemavaram, Tuni Coast, Andhra Pradesh,
-specializes in producing high quality L. Vannamei post larvae.
-Our hatchery follows strict biosecurity protocols and modern
-larval rearing practices to ensure strong and healthy PL for farmers.
-
-</p>
-
-</section>
-
-<section class="container" id="facilities">
-
-<h2 class="section-title">Hatchery Facilities</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="tank.jpg">
-<h3>Larval Rearing Tanks</h3>
-</div>
-
-<div class="card">
-<img src="lab.jpg">
-<h3>Laboratory</h3>
-</div>
-
-<div class="card">
-<img src="filtration.jpg">
-<h3>Water Filtration System</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="container" id="quality">
-
-<h2 class="section-title">PL Quality</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>High Survival</h3>
-<p>Strong survival rates from Nauplii to PL stage.</p>
-</div>
-
-<div class="card">
-<h3>Healthy PL</h3>
-<p>Active swimming and strong stress resistance.</p>
-</div>
-
-<div class="card">
-<h3>Disease Screening</h3>
-<p>Regular pathogen monitoring and testing.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="container" id="gallery">
-
-<h2 class="section-title">Hatchery Gallery</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="gallery1.jpg">
-</div>
-
-<div class="card">
-<img src="gallery2.jpg">
-</div>
-
-<div class="card">
-<img src="gallery3.jpg">
-</div>
-
-</div>
-
-</section>
-
-<section class="cta" id="contact">
-
-<h2>Book Shrimp Seed</h2>
-
-<p>Contact us directly to check PL availability</p>
-
-<br>
-
-<a class="cta-btn" href="tel:+918374629536">
-📞 Call 8374629536
-</a>
-
-</section>
-
-<footer>
-
-<p><b>MP Aqua Hatchery</b></p>
-
-<p>Vemavaram, Tuni Coast, Andhra Pradesh</p>
-
-<p>Phone: 8374629536</p>
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/918374629536">
-💬 WhatsApp
-</a>
-
-<a class="call" href="tel:+918374629536">
-📞 Call
-</a>
-
-</body>
-</html>
