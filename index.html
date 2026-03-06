@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -12,18 +11,20 @@
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 background:#FEFEFE;
 color:#333;
 }
+
+/* HEADER */
 
 header{
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:15px 40px;
-background:#FEFEFE;
-border-bottom:2px solid #4A6A67;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo{
@@ -37,49 +38,67 @@ height:60px;
 }
 
 .logo h2{
-color:#4A6A67;
 margin:0;
+color:#4A6A67;
+font-size:26px;
 }
 
 nav a{
-margin:0 15px;
+margin-left:25px;
 text-decoration:none;
+font-weight:600;
 color:#4A6A67;
-font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
-height:500px;
+height:520px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:#4A6A67;
-color:white;
+
+background-image:url("pl-tray.jpg");
+background-size:cover;
+background-position:center;
+
+}
+
+.hero-overlay{
+background:rgba(255,255,255,0.85);
+padding:40px;
+border-radius:10px;
 }
 
 .hero h1{
+color:#4A6A67;
 font-size:48px;
 margin:0;
 }
 
 .hero p{
 font-size:20px;
+margin-top:10px;
 }
+
+/* SECTIONS */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .section-title{
 text-align:center;
 color:#4A6A67;
+font-size:32px;
 margin-bottom:40px;
-font-size:30px;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -91,7 +110,7 @@ gap:30px;
 background:white;
 padding:25px;
 border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 text-align:center;
 }
 
@@ -100,22 +119,26 @@ width:100%;
 border-radius:8px;
 }
 
+/* CTA */
+
 .cta{
 background:#4A6A67;
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 }
 
-.call-btn{
+.cta-btn{
 background:white;
 color:#4A6A67;
-padding:15px 30px;
-font-size:18px;
+padding:16px 30px;
 border-radius:8px;
+font-size:18px;
 text-decoration:none;
 font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
 background:#4A6A67;
@@ -124,16 +147,32 @@ text-align:center;
 padding:30px;
 }
 
+/* FLOATING BUTTONS */
+
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
 font-size:18px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.call{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#4A6A67;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -145,32 +184,29 @@ font-size:18px;
 <header>
 
 <div class="logo">
-
 <img src="logo.png">
-
-<div>
-<h2>MP AQUA</h2>
-<p style="margin:0;color:#4A6A67;">Hatchery</p>
-</div>
-
+<h2>MP AQUA HATCHERY</h2>
 </div>
 
 <nav>
-
 <a href="#about">About</a>
 <a href="#facilities">Facilities</a>
 <a href="#quality">PL Quality</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
 
 <section class="hero">
 
+<div class="hero-overlay">
+
 <h1>MP Aqua Hatchery</h1>
 
 <p>CAA Approved L. Vannamei Hatchery</p>
+
+</div>
 
 </section>
 
@@ -180,10 +216,10 @@ font-size:18px;
 
 <p style="text-align:center">
 
-MP Aqua Hatchery is a CAA approved shrimp hatchery located in Vemavaram,
-Tuni Coast, Andhra Pradesh. We specialize in producing strong and
-high quality L. Vannamei post larvae using strict hatchery biosecurity
-and advanced larval rearing techniques.
+MP Aqua Hatchery located in Vemavaram, Tuni Coast, Andhra Pradesh,
+specializes in producing high quality L. Vannamei post larvae.
+Our hatchery follows strict biosecurity protocols and modern
+larval rearing practices to ensure strong and healthy PL for farmers.
 
 </p>
 
@@ -196,27 +232,18 @@ and advanced larval rearing techniques.
 <div class="grid">
 
 <div class="card">
-
 <img src="tank.jpg">
-
 <h3>Larval Rearing Tanks</h3>
-
 </div>
 
 <div class="card">
-
 <img src="lab.jpg">
-
 <h3>Laboratory</h3>
-
 </div>
 
 <div class="card">
-
-<img src="water.jpg">
-
-<h3>Water Filtration</h3>
-
+<img src="filtration.jpg">
+<h3>Water Filtration System</h3>
 </div>
 
 </div>
@@ -230,27 +257,40 @@ and advanced larval rearing techniques.
 <div class="grid">
 
 <div class="card">
-
-<h3>Strong Survival</h3>
-
-<p>High survival from Nauplii to PL stage.</p>
-
+<h3>High Survival</h3>
+<p>Strong survival rates from Nauplii to PL stage.</p>
 </div>
 
 <div class="card">
-
-<h3>Active Swimming</h3>
-
-<p>Healthy and stress resistant PL.</p>
-
+<h3>Healthy PL</h3>
+<p>Active swimming and strong stress resistance.</p>
 </div>
 
 <div class="card">
-
 <h3>Disease Screening</h3>
+<p>Regular pathogen monitoring and testing.</p>
+</div>
 
-<p>Regular testing for major shrimp pathogens.</p>
+</div>
 
+</section>
+
+<section class="container" id="gallery">
+
+<h2 class="section-title">Hatchery Gallery</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="gallery1.jpg">
+</div>
+
+<div class="card">
+<img src="gallery2.jpg">
+</div>
+
+<div class="card">
+<img src="gallery3.jpg">
 </div>
 
 </div>
@@ -261,11 +301,13 @@ and advanced larval rearing techniques.
 
 <h2>Book Shrimp Seed</h2>
 
-<p>Call us directly to check availability</p>
+<p>Contact us directly to check PL availability</p>
 
 <br>
 
-<a class="call-btn" href="tel:+918374629536">Call 8374629536</a>
+<a class="cta-btn" href="tel:+918374629536">
+📞 Call 8374629536
+</a>
 
 </section>
 
@@ -275,16 +317,17 @@ and advanced larval rearing techniques.
 
 <p>Vemavaram, Tuni Coast, Andhra Pradesh</p>
 
-<p>📞 8374629536</p>
+<p>Phone: 8374629536</p>
 
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918374629536">
+💬 WhatsApp
+</a>
 
-WhatsApp
-
+<a class="call" href="tel:+918374629536">
+📞 Call
 </a>
 
 </body>
-
 </html>
